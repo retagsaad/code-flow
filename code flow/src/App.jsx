@@ -3,6 +3,7 @@ import Home from './components/Home'
 import Features from './components/Features'
 import Pricing from './components/Pricing'
 import AboutUs from './components/AboutUs'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     <Features/>
     <Pricing/>
     <AboutUs/>
+    <Footer/>
      </div>
     </>
   )

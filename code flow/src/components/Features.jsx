@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Features() {
   return (
-    <div>Features</div>
+    <div id='features'>Features</div>
   )
 }

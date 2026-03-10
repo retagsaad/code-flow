@@ -10,9 +10,9 @@ function App() {
 
   return (
     <>
-     <div className='min-h-screen bg-slate-950 text-white overflow-hidden font-sans scroll-smooth'>
+     <div className='min-h-screen bg-linear-to-r from-[#010b38] via-[#031739f5] to-[#02114c] text-white overflow-hidden font-sans scroll-smooth '>
       <Navbar/>
-    <Home/>
+    <Home className=''/>
     <Features/>
     <Pricing/>
     <AboutUs/>

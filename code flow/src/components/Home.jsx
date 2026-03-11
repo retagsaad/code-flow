@@ -3,7 +3,7 @@ import Box from './Box'
 export default function Home() {
   return (
     <div className='flex max-w-300 mx-auto px-5 mt-6 justify-between'>
-      <div className='py-5 m-5'>
+      <div className='py-5 m-5 sm:left-10'>
         <div className='bg-slate-900 w-48 p-1.5 rounded-full text-sm text-gray-400 mb-3'>
           <button>Introducing CodeFlow AI 2.0</button>
         </div>

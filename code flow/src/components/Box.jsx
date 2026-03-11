@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import { ChevronDown } from 'lucide-react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import {codeExamples} from '../Data/CodeExamples'
+import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 export default function Box() {
   const [activeTab,setActiveTab]=useState("App.jsx")
   return (
@@ -22,7 +25,9 @@ export default function Box() {
           <button className={` p-2 rounded-tl-xl rounded-tr-xl cursor-pointer border border-gray-500 ${activeTab === "Home.jsx" ? "bg-blue-500/30 text-white border-blue-400/20 " : "bg-white/5 border-white/10 hover:bg-white/10 "}`} onClick={()=> setActiveTab("Home.jsx")}>Home.jsx</button>
           <button className={` p-2 rounded-tl-xl rounded-tr-xl cursor-pointer border border-gray-500 ${activeTab === "Navbar.jsx" ? "bg-blue-500/30 text-white border-blue-400/20 " : "bg-white/5 border-white/10 hover:bg-white/10 "}`} onClick={()=> setActiveTab("Navbar.jsx")}>Navbar.jsx</button>
         </div>
-    
+        <SyntaxHighlighter language='javascript' style={nightOwl} customStyle={{margin:0,borderRadius:"8px" ,fontSize:"11px", lineHeight:"1.4", height:"100%", border:"1px solid #3c3c3c"}}>
+          {codeExamples[activeTab]}
+        </SyntaxHighlighter>
         </div>
       </div>
     </div>

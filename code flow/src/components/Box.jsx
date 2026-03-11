@@ -18,11 +18,11 @@ export default function Box() {
         </div>
         <div>
         <div className='flex bg-mist-900 gap-5 m-5'>
-          <button className={`bg-mist-800 p-2 rounded-tl-xl rounded-tr-xl hover:bg-blue-950 cursor-pointer border border-gray-500 ${activeTab === "App.jsx" ? "bg-blue-500/30 text-white border-blue-400/20 " : "bg-white/5 border-white/10 hover:bg-white/10 "}`}>App.jsx</button>
-          <button className={`bg-mist-800 p-2 rounded-tl-xl rounded-tr-xl hover:bg-blue-950 cursor-pointer border border-gray-500 ${activeTab === "Home.jsx" ? "bg-blue-500/30 text-white border-blue-400/20 " : "bg-white/5 border-white/10 hover:bg-white/10 "}`}>Home.jsx</button>
-          <button className={`bg-mist-800 p-2 rounded-tl-xl rounded-tr-xl hover:bg-blue-950 cursor-pointer border border-gray-500 ${activeTab === "Navbar.jsx" ? "bg-blue-500/30 text-white border-blue-400/20 " : "bg-white/5 border-white/10 hover:bg-white/10 "}`}>Navbar.jsx</button>
+          <button className={` p-2 rounded-tl-xl rounded-tr-xl cursor-pointer border border-gray-500 ${activeTab === "App.jsx" ? "bg-blue-500/30 text-white border-blue-400/20 " : "bg-white/5 border-white/10 hover:bg-white/10 "}`} onClick={()=> setActiveTab("App.jsx")}>App.jsx</button>
+          <button className={` p-2 rounded-tl-xl rounded-tr-xl cursor-pointer border border-gray-500 ${activeTab === "Home.jsx" ? "bg-blue-500/30 text-white border-blue-400/20 " : "bg-white/5 border-white/10 hover:bg-white/10 "}`} onClick={()=> setActiveTab("Home.jsx")}>Home.jsx</button>
+          <button className={` p-2 rounded-tl-xl rounded-tr-xl cursor-pointer border border-gray-500 ${activeTab === "Navbar.jsx" ? "bg-blue-500/30 text-white border-blue-400/20 " : "bg-white/5 border-white/10 hover:bg-white/10 "}`} onClick={()=> setActiveTab("Navbar.jsx")}>Navbar.jsx</button>
         </div>
-
+    
         </div>
       </div>
     </div>

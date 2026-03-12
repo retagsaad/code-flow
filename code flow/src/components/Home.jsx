@@ -4,8 +4,8 @@ export default function Home() {
   return (
     <div className='flex max-w-300 mx-auto px-5 mt-6 justify-between'>
       <div className='py-5 m-5 sm:left-10'>
-        <div className='bg-slate-900 w-48 p-1.5 rounded-full text-sm text-gray-400 mb-3'>
-          <button>Introducing CodeFlow AI 2.0</button>
+        <div className='bg-slate-900 w-52 p-1.5 rounded-full text-sm text-gray-400 mb-3 text-nowrap'>
+          <button>✨Introducing CodeFlow AI 2.0</button>
         </div>
         <h5 className='text-white font-bold text-5xl leading-snug'>Code Faster <br /> <span className='text-blue-400'>Build Better</span><br /> With CodeFlow AI</h5>
         <p className='w-120 text-sm text-gray-500 py-5'>Accelerate your development workflow with intelligent code completion automated testing, and smart debugging. Ship production-ready code 10x faster.</p>

@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { ChevronDown } from 'lucide-react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import {codeExamples} from '../Data/CodeExamples'
+import {codeExamples, floatingCards} from '../Data/CodeExamples'
 import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+
 export default function Box() {
   const [activeTab,setActiveTab]=useState("App.jsx")
+  const cuurentFloatingCard=floatingCards[activeTab];
   return (
     <div className='bg-gray-900  p-5 rounded-xl w-xl h-full'>
       <div className='bg-mist-900 rounded-xl  w-full h-full'>
@@ -29,7 +31,16 @@ export default function Box() {
           {codeExamples[activeTab]}
         </SyntaxHighlighter>
         </div>
-      </div>
+        <div className={`hidden lg:block absolute  bottom-40 right-50 transform translate-y-8 w-72 p-5 rounded-xl ${cuurentFloatingCard.bgColor}`}>
+        <div className='flex items-center space-x-2 mb-2'>
+        <div className={`w-6 h-6 ${cuurentFloatingCard.iconColor} flex items-center justify-center text-sm font-bold`}>
+          {cuurentFloatingCard.icon}
+        </div>
+        <span className={`text-sm font-medium ${cuurentFloatingCard.textColor}`}>{cuurentFloatingCard.title}</span>
+        </div>
+        <div className={`text-sm text-left ${cuurentFloatingCard.contentColor}`}>{cuurentFloatingCard.content}</div>
+        </div>
+      </div>  
     </div>
   )
 }

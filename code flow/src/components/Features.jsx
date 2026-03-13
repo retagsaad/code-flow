@@ -62,12 +62,14 @@ export default function Features() {
         {features.map((feature, key) => (
           <div key={key} className="flex">
             <div className="">
-              <h1>{feature.description}</h1>
-              <p>{feature.title}</p>
+              <h1>{feature.title}</h1>
+              <p>{feature.description}</p>
             </div>
             <div className="bg-gray-800/40  p-5 rounded-xl w-lg h-full mt-20">
+            <div className="flex ">
               <p>{feature.title}</p>
               <img src={feature.img} alt="" className="w-10 h-7 absolute " />
+            </div>
               <SyntaxHighlighter
                 language="javascript"
                 style={nightOwl}

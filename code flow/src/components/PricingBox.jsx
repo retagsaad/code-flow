@@ -14,6 +14,7 @@ const Boxes =[
     price:"$79 /month",
     features:["Up to 25 team members","100GB storage","Advanced analytics","Priority support","API access","Mobile app","Custom integrations","Advanced security",],
     button:"Get Started",
+    tag:"⭐Most Popular",
   },
    {
     title:"Enterprise",
@@ -26,21 +27,23 @@ const Boxes =[
 
 export default function PricingBox() {
   return (
-    <div>
-      <div>
-        {Boxes.map((key,Box)=>(
-          <div key={key}>
+    <div className='flex mt-15'>
+        {Boxes.map((Box,key)=>(
+          <div key={key} className='bg-[#010b38]/40 w-full'>
+            <div className=''>
             <div>
+              <p>{Box.tag}</p>
               <h1>{Box.title}</h1>
               <p>{Box.discription}</p>
               <h1>{Box.price}</h1>
             </div>
-            <div>
-              <p>{Box.features}</p>
+            <div className=' flex flex-col'>
+              <p >{Box.features}</p>
+            </div>
             </div>
           </div>
         ))}
-      </div>
+      
     </div>
   )
 }

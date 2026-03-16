@@ -18,31 +18,35 @@ export default function AboutUs() {
       name:"Marcus Rodriguez",
       title:"Tech Lead",
       img:img,
-      person:person2,
+      person:person3,
     },
      {
       text:"Our development velocity increased by 300% since adopting this platform. It's like having a senior developer pair programming with every team member.",
       name:"Emily Watson",
       title:"CTO",
       img:img,
-      person:person3,
+      person:person2,
     },
   ]
   return (
-    <div id='testimonials' className='flex mt-30'>
-      <div>
-        <h1>What developers are saying about us</h1>
-        <p>Everything you need to build, test, and deploy applications with AI-powered development tools.</p>
+    <div id='testimonials' className='flex mt-30 justify-center gap-5'>
+      <div className='w-150'>
+        <h1 className='text-4xl font-bold w-90 mb-6'>What developers are saying about us</h1>
+        <p className='text-gray-500'>Everything you need to build, test, and deploy applications with AI-powered development tools.</p>
       </div>
-      <div>
+      <div className='mb-2'>
         {Reviews.map((Review,key)=>(
-          <div key={key}> 
-          <img src={img} alt="" />
+          <div key={key} className='w-100 bg-blue-900/10 p-5 gap-2 m-5'> 
+          <div className='flex gap-2'>
+          <img src={Review.img} alt="" className='text-left flex justify-start w-6 h-6 mr-2'/>
           <p>{Review.text}</p>
-          <div>
-            <img src={Review.person} alt="" className='w-10 rounded-2xl'/>
+          </div>
+          <div className='flex gap-2 ml-8 mt-3'>
+            <img src={Review.person} alt="" className='w-10 h-10 rounded-4xl'/>
+            <div>
             <p>{Review.name}</p>
-            <p>{Review.title}</p>
+            <p className='text-gray-500  '>{Review.title}</p>
+            </div>
           </div>
           </div>
         ))}

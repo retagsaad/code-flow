@@ -2,8 +2,8 @@ import React from 'react'
 import Box from './Box'
 export default function Home() {
   return (
-    <div className='flex max-w-300 mx-auto px-5 mt-6 justify-between'>
-      <div className='py-5 m-5 sm:left-10'>
+    <div className='flex max-w-300 mx-auto px-5 mt-6 justify-between sm:block md:flex'>
+      <div className='py-5 m-5 sm:left-10 sm:ml-25'>
         <div className='bg-slate-900 w-52 p-1.5 rounded-full text-sm text-gray-400 mb-3 text-nowrap'>
           <button>✨Introducing CodeFlow AI 2.0</button>
         </div>

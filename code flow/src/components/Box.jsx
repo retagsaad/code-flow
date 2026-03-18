@@ -8,7 +8,7 @@ export default function Box() {
   const [activeTab, setActiveTab] = useState("App.jsx");
   const cuurentFloatingCard = floatingCards[activeTab];
   return (
-    <div className="bg-gray-900  p-5 rounded-xl w-xl h-full">
+    <div className="bg-gray-900  p-5 rounded-xl w-xl h-full sm:w-lg sm:ml-15">
       <div className="bg-mist-900 rounded-xl  w-full h-full">
         <div className="flex justify-between bg-mist-800 p-2 rounded-t-xl  ">
           <div className="flex gap-5 ml-3">
@@ -60,7 +60,7 @@ export default function Box() {
           </SyntaxHighlighter>
         </div>
         <div
-          className={`hidden lg:block absolute  bottom-40 right-50 transform translate-y-8 w-72 p-5 rounded-xl ${cuurentFloatingCard.bgColor}`}
+          className={`sm:w-60 sm:-bottom-117.5 sm:right-20 lg:block absolute  bottom-40 right-50 transform translate-y-8 w-72 p-5 rounded-xl ${cuurentFloatingCard.bgColor}`}
         >
           <div className="flex items-center space-x-2 mb-2">
             <div

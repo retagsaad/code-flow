@@ -6,7 +6,7 @@ export default function Navbar() {
       <div>
         <img src="logo.png" alt="" className='w-40 ml-50'/>
       </div>
-      <div className='pt-5 pr-40 text-gray-300'>
+      <div className='pt-5 pr-40 text-gray-300 sm:hidden md:block'>
         <a className='m-5' href="#features">Features</a>
         <a className='m-5' href="#pricing">Pricing</a>
         <a className='m-5' href="#testimonials">Testimonials</a>

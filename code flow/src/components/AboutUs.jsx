@@ -29,10 +29,10 @@ export default function AboutUs() {
     },
   ]
   return (
-    <div id='testimonials' className='flex mt-30 justify-center gap-5'>
-      <div className='w-150'>
-        <h1 className='text-4xl font-bold w-90 mb-6'>What developers are saying about us</h1>
-        <p className='text-gray-500'>Everything you need to build, test, and deploy applications with AI-powered development tools.</p>
+    <div id='testimonials' className='flex mt-30 justify-center gap-5 sm:block sm:ml-20 md:flex md:ml-0'>
+      <div className='w-150 sm:ml-10 md:ml-0'>
+        <h1 className='text-4xl sm:text-3xl font-bold w-90 mb-6'>What developers are saying about us</h1>
+        <p className='text-gray-500 sm:w-90 md:w-fit'>Everything you need to build, test, and deploy applications with AI-powered development tools.</p>
       </div>
       <div className='mb-2'>
         {Reviews.map((Review,key)=>(

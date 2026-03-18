@@ -60,15 +60,15 @@ export default function PricingBox() {
       {Boxes.map((Box, key) => (
         <div
           key={key}
-          className="bg-[#010b38]/40 w-90 h-150 m-5 p-5 rounded-2xl flex flex-col"
+          className="bg-[#010b38]/40 w-90 h-150 m-5 p-5 rounded-2xl flex flex-col sm:w-50 sm:h-fit md:w-90 md:h-150"
         >
           <div className="">
-            <p className="absolute top-559 left-180 bg-blue-500 rounded-2xl w-32">{Box.tag}</p>
+            <p className="absolute top-559 left-180 bg-blue-500 rounded-2xl w-32 sm:left-65 sm:top-772 md:left-180 md:top-559">{Box.tag}</p>
             <h1 className="font-bold text-center text-2xl">{Box.title}</h1>
             <p className="   text-center text-gray-600 my-2">
               {Box.discription}
             </p>
-            <h1 className="font-bold text-center text-4xl text-blue-400 mb-7 mt-3">
+            <h1 className="font-bold text-center text-4xl text-blue-400 mb-7 mt-3 sm:text-3xl md:text-4xl">
               {Box.price}{" "}
               <span className="text-sm text-gray-500">{Box.per}</span>
             </h1>
@@ -80,7 +80,7 @@ export default function PricingBox() {
               </li>
             ))}
           </ul>
-          <button className="mt-auto w-full bg-blue-500 text-white py-2 rounded-lg cursor-pointer">
+          <button className="mt-auto sm:mt-5 md:mt-auto w-full bg-blue-500 text-white py-2 rounded-lg cursor-pointer">
             {Box.button}
           </button>
         </div>

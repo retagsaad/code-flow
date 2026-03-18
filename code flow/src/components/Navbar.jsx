@@ -7,9 +7,9 @@ export default function Navbar() {
         <img src="logo.png" alt="" className='w-40 ml-50'/>
       </div>
       <div className='pt-5 pr-40 text-gray-300 sm:hidden md:block'>
-        <a className='m-5' href="#features">Features</a>
-        <a className='m-5' href="#pricing">Pricing</a>
-        <a className='m-5' href="#testimonials">Testimonials</a>
+        <a className='m-5 hover:text-white' href="#features">Features</a>
+        <a className='m-5 hover:text-white' href="#pricing">Pricing</a>
+        <a className='m-5 hover:text-white' href="#testimonials">Testimonials</a>
 
       </div>
     </div>

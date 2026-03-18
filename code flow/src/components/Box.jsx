@@ -60,7 +60,7 @@ export default function Box() {
           </SyntaxHighlighter>
         </div>
         <div
-          className={`sm:w-60 sm:-bottom-117.5 sm:right-20 lg:block absolute  bottom-40 right-50 transform translate-y-8 w-72 p-5 rounded-xl ${cuurentFloatingCard.bgColor}`}
+          className={`sm:w-60 sm:-bottom-117.5 md:bottom-40 md:right-50 sm:right-20 lg:block absolute  bottom-40 right-50 transform translate-y-8 w-72 p-5 rounded-xl ${cuurentFloatingCard.bgColor}`}
         >
           <div className="flex items-center space-x-2 mb-2">
             <div

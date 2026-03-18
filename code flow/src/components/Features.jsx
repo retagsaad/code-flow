@@ -62,13 +62,13 @@ export default function Features() {
         {features.map((feature, key) => (
           <div
             key={key}
-            className={`flex items-center gap-16 ${feature.imagePosition === "right" ? "flex-row-reverse" : ""}`}
+            className={`flex items-center gap-16 sm:ml-20 sm:block md:flex ${feature.imagePosition === "right" ? "flex-row-reverse" : ""}`}
           >
             <div className={` `}>
               <h1 className="text-2xl font-bold mb-5">{feature.title}</h1>
               <p className="max-w-125 text-gray-500">{feature.description}</p>
             </div>
-            <div className="bg-gray-800/40  p-5 rounded-xl w-lg h-full mt-8">
+            <div className="bg-gray-800/40  p-5 rounded-xl w-lg h-full mt-8 sm:w-sm md:w-lg">
               <div className="flex absolute p-2">
                 <p className="ml-12">{feature.title}</p>
                 <img src={feature.img} alt="" className="w-10 h-7 absolute " />
@@ -84,6 +84,7 @@ export default function Features() {
                   border: "1px solid #3c3c3c",
                   width: "100%",
                   padding: "40px",
+                
                 }}
               >
                 {feature.code}

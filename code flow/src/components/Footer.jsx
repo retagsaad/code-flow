@@ -27,7 +27,7 @@ export default function Footer() {
   ];
   return (
     <div className="bg-[#020a2d] text-white p-10">
-      <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] ">
+      <div className="grid sm:grid-cols-3 grid-cols-[1.5fr_1fr_1fr_1fr_1fr] md:grid-cols-[1.5fr_1fr_1fr_1fr_1fr]">
         <div className="col-span-1">
           <img src="logo.png" alt="" className="w-40" />
           <p className="text-gray-400 max-w-xs leading-relaxed ml-5">
@@ -70,16 +70,16 @@ export default function Footer() {
       <hr className="border-gray-700 my-5" />
       <div className="flex justify-between mt-5">
         <div>
-          <p>© 2025 CodeFlow. All rights reserved.</p>
+          <p className="sm:text-sm  md:text-md">© 2025 CodeFlow. All rights reserved.</p>
         </div>
         <div className="flex gap-5 ">
-          <a href="#" className="hover:text-gray-400 transition">
+          <a href="#" className="sm:text-sm md:text-md hover:text-gray-400 transition">
             Privacy Policy
           </a>
-          <a href="#" className="hover:text-gray-400 transition">
+          <a href="#" className="sm:text-sm md:text-md hover:text-gray-400 transition">
             Terms of Service
           </a>
-          <a href="#" className="hover:text-gray-400 transition">
+          <a href="#" className="sm:text-sm md:text-md hover:text-gray-400 transition">
             Cookie Settings
           </a>
         </div>

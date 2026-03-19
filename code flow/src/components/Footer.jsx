@@ -26,62 +26,40 @@ export default function Footer() {
     },
   ];
   return (
-    <div className="bg-[#020a2d] text-white p-10">
-      <div className="grid sm:grid-cols-3 grid-cols-[1.5fr_1fr_1fr_1fr_1fr] md:grid-cols-[1.5fr_1fr_1fr_1fr_1fr]">
-        <div className="col-span-1">
-          <img src="logo.png" alt="" className="w-40" />
-          <p className="text-gray-400 max-w-xs leading-relaxed ml-5">
-            Transform your workflow with AI-powered tools and automation. Built
-            for modern teams.
+    <div className="bg-[#020a2d] text-white px-5 md:px-10 lg:px-20 py-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
+        {/* LOGO */}
+        <div>
+          <img src="logo.png" className="w-32 mb-4" />
+          <p className="text-gray-400 max-w-xs">
+            Transform your workflow with AI-powered tools and automation.
           </p>
-          <div className="flex gap-2 my-5 ml-5">
-            <a href="#" className="w-6 h-7">
-              <img src="facebook.png" alt="" />
-            </a>
-            <a href="#" className="w-6">
-              <img src="instagram.png" alt="" />
-            </a>
-            <a href="#" className="w-6">
-              <img src="linkedin.png" alt="" />
-            </a>
-            <a href="#" className="w-6">
-              <img src="youtube.png" alt="" />
-            </a>
-          </div>
         </div>
+
+        {/* LINKS */}
         {links.map((link, key) => (
           <div key={key}>
-            <h2 className="font-bold  mb-3">{link.title}</h2>
+            <h2 className="font-semibold mb-3">{link.title}</h2>
             <ul className="space-y-2">
               {link.items.map((item, i) => (
-                <li key={i}>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-white transition"
-                  >
-                    {item}
-                  </a>
+                <li key={i} className="text-gray-400 hover:text-white">
+                  {item}
                 </li>
               ))}
             </ul>
           </div>
         ))}
       </div>
-      <hr className="border-gray-700 my-5" />
-      <div className="flex justify-between mt-5">
-        <div>
-          <p className="sm:text-sm  md:text-md">© 2025 CodeFlow. All rights reserved.</p>
-        </div>
-        <div className="flex gap-5 ">
-          <a href="#" className="sm:text-sm md:text-md hover:text-gray-400 transition">
-            Privacy Policy
-          </a>
-          <a href="#" className="sm:text-sm md:text-md hover:text-gray-400 transition">
-            Terms of Service
-          </a>
-          <a href="#" className="sm:text-sm md:text-md hover:text-gray-400 transition">
-            Cookie Settings
-          </a>
+
+      <hr className="border-gray-700 my-8" />
+
+      <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm gap-4">
+        <p>© 2025 CodeFlow</p>
+
+        <div className="flex gap-5">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
         </div>
       </div>
     </div>

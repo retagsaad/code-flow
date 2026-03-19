@@ -1,17 +1,44 @@
-import React from 'react'
+import React, { useState } from "react";
 
 export default function Navbar() {
-  return (
-    <div className='flex justify-between fixed  top-0 z-50 w-full p-2 from-[#010b38] via-[#031739f5] to-[#02114c]/80 backdrop-blur'>
-      <div>
-        <img src="logo.png" alt="" className='w-40 ml-50'/>
-      </div>
-      <div className='pt-5 pr-40 text-gray-300 sm:hidden md:block'>
-        <a className='m-5 hover:text-white' href="#features">Features</a>
-        <a className='m-5 hover:text-white' href="#pricing">Pricing</a>
-        <a className='m-5 hover:text-white' href="#testimonials">Testimonials</a>
+  const [open, setOpen] = useState(false);
 
+  return (
+    <div className="fixed top-0 left-0 w-full z-50 bg-[#020a2d]/50 backdrop-blur-md">
+      <div className="max-w-6xl mx-auto px-5 md:px-10 lg:px-20 flex justify-between items-center py-3">
+        {/* LOGO */}
+        <img src="logo.png" alt="" className="w-32" />
+
+        {/* LINKS (Desktop) */}
+        <div className="hidden md:flex gap-8 text-gray-300">
+          <a href="#features" className="hover:text-white">
+            Features
+          </a>
+          <a href="#pricing" className="hover:text-white">
+            Pricing
+          </a>
+          <a href="#testimonials" className="hover:text-white">
+            Testimonials
+          </a>
+        </div>
+
+        {/* MENU BUTTON (Mobile) */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden text-white text-2xl"
+        >
+          ☰
+        </button>
       </div>
+
+      {/* MOBILE MENU */}
+      {open && (
+        <div className="md:hidden bg-[#020a2d] px-5 pb-5 flex flex-col gap-4 text-gray-300">
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#testimonials">Testimonials</a>
+        </div>
+      )}
     </div>
-  )
+  );
 }

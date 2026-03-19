@@ -48,51 +48,28 @@ import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/hljs";
 export default function Features() {
   return (
     <div
+      className="max-w-6xl mx-auto px-5 md:px-10 lg:px-20 py-16"
       id="features"
-      className="py-16 mt-20 max-w-6xl mx-auto  scroll-smooth sm:py-20 px-10 sm:px-6 lg:px-8 relative"
     >
-      <div className="text-center mb-12 sm:mb-16">
-        <h1 className="text-white font-bold md:text-5xl sm:text-4xl lg:text-5xl text-5xl leading-snug sm:mb-6">
-          Your Complete Development <br />
-          <span className="text-blue-400">Workflow</span>
-        </h1>
-      </div>
-
-      <div className="space-y- sm:space-y-20 lg:space-y-14">
-        {features.map((feature, key) => (
-          <div
-            key={key}
-            className={`flex items-center gap-16 sm:ml-20 sm:block md:flex ${feature.imagePosition === "right" ? "flex-row-reverse" : ""}`}
-          >
-            <div className={` `}>
-              <h1 className="text-2xl font-bold mb-5">{feature.title}</h1>
-              <p className="max-w-125 text-gray-500">{feature.description}</p>
-            </div>
-            <div className="bg-gray-800/40  p-5 rounded-xl w-lg h-full mt-8 sm:w-sm md:w-lg">
-              <div className="flex absolute p-2">
-                <p className="ml-12">{feature.title}</p>
-                <img src={feature.img} alt="" className="w-10 h-7 absolute " />
-              </div>
-              <SyntaxHighlighter
-                language="javascript"
-                style={nightOwl}
-                customStyle={{
-                  borderRadius: "8px",
-                  fontSize: "11px",
-                  lineHeight: "1.4",
-                  height: "100%",
-                  border: "1px solid #3c3c3c",
-                  width: "100%",
-                  padding: "40px",
-                
-                }}
-              >
-                {feature.code}
-              </SyntaxHighlighter>
-            </div>
+      {features.map((feature, key) => (
+        <div
+          key={key}
+          className={`flex flex-col md:flex-row items-center gap-10 mb-16 ${
+            feature.imagePosition === "right" ? "md:flex-row-reverse" : ""
+          }`}
+        >
+          <div className="w-full md:w-1/2">
+            <h2 className="text-2xl font-bold mb-4">{feature.title}</h2>
+            <p className="text-gray-500">{feature.description}</p>
           </div>
-        ))}
-      </div>
+
+          <div className="w-full md:w-1/2 bg-gray-800/40 p-5 rounded-xl">
+            <SyntaxHighlighter language="javascript" style={nightOwl}>
+              {feature.code}
+            </SyntaxHighlighter>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }

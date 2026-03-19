@@ -34,6 +34,12 @@ export default function Footer() {
           <p className="text-gray-400 max-w-xs">
             Transform your workflow with AI-powered tools and automation.
           </p>
+          <div className="flex gap-2 mt-5">
+            <img src="facebook.png" alt="" className="w-6" />
+            <img src="instagram.png" alt="" className="w-6" />
+            <img src="linkedin.png" alt="" className="w-6" />
+            <img src="youtube.png" alt="" className="w-6" />
+          </div>
         </div>
 
         {/* LINKS */}

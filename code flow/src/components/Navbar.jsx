@@ -33,7 +33,7 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       {open && (
-        <div className="md:hidden bg-[#020a2d] px-5 pb-5 flex flex-col gap-4 text-gray-300">
+        <div className="md:hidden bg-[#020a2d]/50 px-5 pb-5 flex flex-col gap-4 text-gray-300">
           <a href="#features">Features</a>
           <a href="#pricing">Pricing</a>
           <a href="#testimonials">Testimonials</a>
